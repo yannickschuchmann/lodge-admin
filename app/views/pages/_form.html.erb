@@ -10,23 +10,15 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <fieldset class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+    <%= f.text_field :title, placeholder: :title, class: "form-control form-control-lg" %>
+  </fieldset>
 
-  <div class="field">
+  <fieldset class="form-group">
     <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
+    <%= f.text_area :body, placeholder: :content, class: "form-control" %>
+  </fieldset>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit nil, class: "btn btn-primary" %>
 <% end %>
