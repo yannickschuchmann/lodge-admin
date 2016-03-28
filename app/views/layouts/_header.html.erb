@@ -1,0 +1,11 @@
+<nav class="navbar navbar-dark bg-inverse">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= material_icon.home %>
+  <% end %>
+  <div class="nav navbar-nav">
+    <%= link_to "Start", root_path, class: "nav-item nav-link" + active_url(root_url, "active") %>
+    <%= link_to "Hüttenbuch", root_path, class: "nav-item nav-link" + active_url(root_url, "active") %>
+    <%= link_to "Benutzer", users_path, class: "nav-item nav-link" + active_resource("users", "active") %>
+    <%= render "devise/shared/session_menu" %>
+  </div>
+</nav>
