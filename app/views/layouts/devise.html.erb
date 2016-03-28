@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lodge</title>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  </head>
+
+  <body>
+    <div class="login-container">
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <h1 class="logo">Hüttenseite</h1>
+        <%= render "layouts/flash" %>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

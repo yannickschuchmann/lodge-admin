@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require tether
 //= require bootstrap
+//= require ie10winphone8-fix
 
 $(function() {
 	$('[data-provider="summernote"]').each(function(){
