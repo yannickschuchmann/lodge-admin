@@ -1,0 +1,17 @@
+<div class="sidebar-module">
+  <%= link_to edit_page_path(@page), class: "btn btn-sm btn-primary-outline" do %>
+    <%= material_icon.edit %> <%= t(:edit) %>
+  <% end %>
+  <%= link_to @page, class: "btn btn-sm btn-danger-outline",
+                method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <%= material_icon.delete %> <%= t(:destroy) %>
+  <% end %>
+</div>
+<div class="sidebar-module">
+  <h4><%= t(:pages) %></h4>
+  <ol class="list-unstyled">
+    <% @pages.each do |page| %>
+    <li><%= link_to page.title, page %></li>
+    <% end %>
+  </ol>
+</div>

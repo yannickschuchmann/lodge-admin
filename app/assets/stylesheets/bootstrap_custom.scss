@@ -39,13 +39,13 @@ $enable-flex: true;
 @import "bootstrap/alert";
 //@import "bootstrap/progress";
 //@import "bootstrap/media";
-//@import "bootstrap/list-group";
+@import "bootstrap/list-group";
 //@import "bootstrap/responsive-embed";
 //@import "bootstrap/close";
 
 // Components w/ JavaScript
 //@import "bootstrap/modal";
-//@import "bootstrap/tooltip";
+@import "bootstrap/tooltip";
 //@import "bootstrap/popover";
 //@import "bootstrap/carousel";
 

@@ -20,6 +20,8 @@ gem 'summernote-rails', '0.6.9.0'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'material_icons'
 
+gem 'browser-timezone-rails'
+
 gem 'devise', :github => 'plataformatec/devise', :branch => 'master'
 
 # Use jquery as the JavaScript library

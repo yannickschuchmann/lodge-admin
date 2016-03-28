@@ -16,10 +16,13 @@
 @import "bootstrap_custom";
 @import "summernote";
 @import "content";
+@import "pages";
 
-
+.btn .material-icons {
+	vertical-align: bottom;
+}
 .navbar {
-	margin-bottom: 1rem;
+	margin: 1rem 0;
 }
 .login-container {
 	height: 100vh;

@@ -16,6 +16,9 @@
 //= require tether
 //= require bootstrap
 //= require ie10winphone8-fix
+//= require jquery.cookie
+//= require jstz
+//= require browser_timezone_rails/set_time_zone
 
 $(function() {
 	$('[data-provider="summernote"]').each(function(){
