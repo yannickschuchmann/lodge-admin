@@ -26,8 +26,8 @@ $enable-flex: true;
 
 // Components
 //@import "bootstrap/animation";
-//@import "bootstrap/dropdown";
-//@import "bootstrap/button-group";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
 //@import "bootstrap/input-group";
 //@import "bootstrap/custom-forms";
 @import "bootstrap/nav";
@@ -44,7 +44,7 @@ $enable-flex: true;
 //@import "bootstrap/close";
 
 // Components w/ JavaScript
-//@import "bootstrap/modal";
+@import "bootstrap/modal";
 @import "bootstrap/tooltip";
 //@import "bootstrap/popover";
 //@import "bootstrap/carousel";

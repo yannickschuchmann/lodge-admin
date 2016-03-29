@@ -17,7 +17,7 @@
 
   <fieldset class="form-group">
     <%= f.label :body %>
-    <%= f.text_area :body, placeholder: :content, class: "form-control" %>
+    <%= f.text_area :body, placeholder: :content, class: "form-control", data: {provider: :summernote} %>
   </fieldset>
 
   <%= f.submit nil, class: "btn btn-primary" %>

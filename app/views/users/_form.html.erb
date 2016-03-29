@@ -38,11 +38,13 @@
             <%= f.label :password_confirmation %>
             <%= f.password_field :password_confirmation, class: "form-control" %>
           </fieldset>
+          <% if current_user.is_admin? %>
           <div class="checkbox">
             <label>
               <%= f.check_box :admin %> is admin?
             </label>
           </div>
+          <% end %>
       <% end %>
 
       <%= f.submit nil, class: "btn btn-primary" %>

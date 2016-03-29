@@ -15,13 +15,43 @@
 //= require turbolinks
 //= require tether
 //= require bootstrap
+//= require summernote
 //= require ie10winphone8-fix
 //= require jquery.cookie
 //= require jstz
 //= require browser_timezone_rails/set_time_zone
 
-$(function() {
-	$('[data-provider="summernote"]').each(function(){
-		$(this).summernote({ });
+
+var sendFile = function(file, $toSummernote) {
+	var data = new FormData();
+	data.append('image[image]', file);
+	$.ajax({
+		data: data,
+		type: 'POST',
+		url: '/images/upload',
+		cache: false,
+		contentType: false,
+		processData: false,
+		error: function(err) {
+			console.log(err)
+		},
+		success: function(data) {
+			console.log("uploaded", data);
+			$toSummernote.summernote("insertImage", data.url);
+		}
 	})
-});
+};
+
+
+var ready = function() {
+	$('[data-provider="summernote"]').each(function(){
+		$(this).summernote({
+			onImageUpload: function(files) {
+				console.log('triggered');
+				sendFile(files[0], $(this));
+			}
+		});
+	});
+};
+
+$(document).on('turbolinks:load', ready); // turbolinks
