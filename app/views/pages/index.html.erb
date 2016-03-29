@@ -1,3 +1,4 @@
+<%= link_to 'New Page', new_page_path, class: "btn btn-primary-outline" %>
 <div class="list-group pages">
   <% @pages.each do |page| %>
     <%= link_to page, class: "list-group-item" do %>
@@ -7,4 +8,3 @@
   <% end %>
 </div>
 <br>
-<%= link_to 'New Page', new_page_path %>

@@ -18,12 +18,18 @@
 @import "summernote";
 @import "content";
 @import "pages";
+@import "users";
 
 .btn .material-icons {
 	vertical-align: bottom;
 }
 .navbar {
 	margin: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+	&::after {
+		content: none;
+	}
 }
 .login-container {
 	height: 100vh;
