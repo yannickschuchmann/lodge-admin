@@ -1,0 +1,13 @@
+<%= link_to 'New Post', new_guestbook_post_path, class: "btn btn-primary-outline" %>
+
+<div class="list-group pages">
+  <% @posts.each do |post| %>
+      <%= link_to post, class: "list-group-item" do %>
+          <%= post.title %>
+          <span class="label label-default label-pill pull-xs-right">
+            <%= "#{time_ago_in_words(post.updated_at)} ago by #{post.user.name}" %>
+          </span>
+      <% end %>
+  <% end %>
+</div>
+<br>

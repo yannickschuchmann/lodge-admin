@@ -1,0 +1,17 @@
+<div class="sidebar-module">
+  <%= link_to edit_guestbook_post_path(@post), class: "btn btn-sm btn-primary-outline" do %>
+    <%= material_icon.edit %> <%= t(:edit) %>
+  <% end %>
+  <%= link_to @post, class: "btn btn-sm btn-danger-outline",
+                method: :delete, data: { confirm: 'Are you sure?' } do %>
+      <%= material_icon.delete %> <%= t(:destroy) %>
+  <% end %>
+</div>
+<div class="sidebar-module">
+  <h4><%= t("Last 5 guestbook posts") %></h4>
+  <ol class="list-unstyled">
+    <% @latest_posts.each do |post| %>
+    <li><%= link_to post.title, post %></li>
+    <% end %>
+  </ol>
+</div>

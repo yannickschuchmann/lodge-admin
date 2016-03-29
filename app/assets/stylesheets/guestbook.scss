@@ -1,0 +1,10 @@
+// Place all the styles related to the guestbook_posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.btn-group-same {
+	display: flex;
+	.btn {
+		flex: 1;
+	}
+}
