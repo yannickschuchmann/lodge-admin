@@ -1,17 +1,17 @@
 <div class="container">
-<nav class="navbar">
-  <div class="nav navbar-nav">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= material_icon.home %>
-    <% end %>
-    <%= link_to "Start", root_path, class: "nav-item nav-link" + active_url(root_url, "active") %>
-    <%= link_to "Inhalte", pages_path, class: "nav-item nav-link" + active_resource("pages", "active") %>
-    <%= link_to "Hüttenbuch", guestbook_posts_path, class: "nav-item nav-link" + active_resource("guestbook", "active") %>
-    <%= link_to "Adressbuch", users_path, class: "nav-item nav-link" + active_resource("users", "active") %>
-  </div>
-  <div class="nav navbar-nav">
-    <%= link_to current_user.name, edit_user_path(current_user), class: "nav-item nav-link nav-link-user" %>
-    <%= render "devise/shared/session_menu" %>
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="nav navbar-nav">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= material_icon.home %>
+      <% end %>
+      <%= link_to "Start", root_path, class: "nav-item nav-link" + active_url(root_url, "active") %>
+      <%= link_to "Inhalte", pages_path, class: "nav-item nav-link" + active_resource("pages", "active") %>
+      <%= link_to "Hüttenbuch", guestbook_posts_path, class: "nav-item nav-link" + active_resource("guestbook", "active") %>
+      <%= link_to "Adressbuch", users_path, class: "nav-item nav-link" + active_resource("users", "active") %>
+    </div>
+    <div class="nav navbar-nav">
+      <%= link_to current_user.name, edit_user_path(current_user), class: "nav-item nav-link nav-link-user" %>
+      <%= render "devise/shared/session_menu" %>
+    </div>
+  </nav>
 </div>
