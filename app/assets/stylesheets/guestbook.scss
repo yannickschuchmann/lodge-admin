@@ -8,3 +8,49 @@
 		flex: 1;
 	}
 }
+
+.article-listing {
+	.list-group-item {
+		border: none;
+		border-bottom: 1px solid $brown;
+		margin-bottom: 0;
+		border-radius: none;
+
+		&:last-child {
+			border: none;
+		}
+
+		.author {
+			font-size: 12px;
+		}
+	}
+	a {
+		color: $green;
+
+		&:hover {
+			background: #B2CC95;
+		}
+	}
+	
+}
+
+.last-posts {
+	border: 2px solid $brown;
+	border-radius: 5px;
+	padding: 15px;
+
+	ol {
+		margin-bottom: 0;
+		li {
+			border-bottom: 1px solid $brown;
+			padding: 5px 0;
+			&:first-child {
+				padding-top: 0;
+			}
+			&:last-child {
+				border: none;
+				padding-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,3 +1,73 @@
 // Place all the styles related to the content controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$green: #417505;
+$brown: #8B572A;
+$orange: #F5A623;
+
+h2, h3 {
+	color: $brown;
+}
+
+h1 {
+	font-size: 120px;
+	color: #fff;
+}
+
+h2 {
+	font-size: 24px; /*30px */
+}
+
+h3 {
+	font-size: 18px; /* 24px */
+}
+
+a {
+	color: $green;
+
+	&:hover {
+		color: #2B4A07;
+	}
+}
+
+.ghost-btn {
+	color: $orange;
+	border: 1px solid $orange!important;
+	border-radius: 20px!important;
+	background: transparent;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.header-image {
+	border-top: 3px solid $brown;
+	border-bottom: 3px solid $brown;
+	padding: 0;
+	height: 500px;
+	overflow: hidden;
+	
+	img {
+		width: 100%;
+	}
+
+	h1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.small-header-image {
+	height: 160px;
+	overflow: hidden;
+
+	img {
+		filter: blur(40px);
+	}
+}
+
+.date {
+	color: $brown;
+	font-size: 14px; /* 16px */
+}

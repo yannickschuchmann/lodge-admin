@@ -7,8 +7,7 @@
       <%= material_icon.delete %> <%= t(:destroy) %>
   <% end %>
 </div>
-<div class="sidebar-module">
-  <h4><%= t("Last 5 guestbook posts") %></h4>
+<div class="sidebar-module last-posts">
   <ol class="list-unstyled">
     <% @latest_posts.each do |post| %>
     <li><%= link_to post.title, post %></li>
