@@ -9,10 +9,12 @@
 	<div class="list-group pages article-listing">
 	  <% @posts.each do |post| %>
 	      <%= link_to post, class: "list-group-item" do %>
-	          <%= post.title %>
+	      <div class="flex-container link-to-article">
+	          <div><%= post.title %></div>
 	          <div class="date">
         		14.07.2016 - 28.07.2016
       		  </div>
+      	  </div>
 	          <span class="label label-default label-pill pull-xs-right author">
 	            <%= "#{time_ago_in_words(post.updated_at)} ago by #{post.user.name}" %>
 	          </span>

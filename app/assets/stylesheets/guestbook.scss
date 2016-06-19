@@ -9,6 +9,10 @@
 	}
 }
 
+.blog-post-btns {
+	justify-content: space-between;
+}
+
 .article-listing {
 	.list-group-item {
 		border: none;
@@ -22,6 +26,7 @@
 
 		.author {
 			font-size: 12px;
+			align-self: center;
 		}
 	}
 	a {
