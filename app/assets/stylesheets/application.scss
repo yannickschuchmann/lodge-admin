@@ -60,6 +60,10 @@ h3 {
 a {
 	color: $green;
 
+	h3 {
+		color: $green;
+	}
+
 	&:hover {
 		color: #2B4A07;
 	}
@@ -126,15 +130,33 @@ a {
 	}
 }
 
+.book-entry {
+	.book-entry-image {
+		margin-right: 10px;
+	}
+
+	.book-entry-title {
+		h3 {
+			margin-bottom: 3px;
+		}
+	}
+}
+
 .btn .material-icons {
 	vertical-align: bottom;
 }
+
 .navbar {
 	margin: 1rem 0;
 	display: flex;
 	justify-content: space-between;
 	&::after {
 		content: none;
+	}
+
+	.navbar-nav {
+		display: flex;
+		align-items: center;
 	}
 }
 .login-container {

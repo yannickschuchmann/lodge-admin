@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="nav navbar-nav">
       <%= link_to root_path, class: "navbar-brand" do %>
-        <%= material_icon.home %>
+        <img src="<%= image_url('logo.svg')%>">  
       <% end %>
       <%= link_to "Start", root_path, class: "nav-item nav-link" + active_url(root_url, "active") %>
       <%= link_to "Inhalte", pages_path, class: "nav-item nav-link" + active_resource("pages", "active") %>
