@@ -1,13 +1,25 @@
-<%= link_to 'New Post', new_guestbook_post_path, class: "btn btn-primary-outline" %>
-
-<div class="list-group pages">
-  <% @posts.each do |post| %>
-      <%= link_to post, class: "list-group-item" do %>
-          <%= post.title %>
-          <span class="label label-default label-pill pull-xs-right">
-            <%= "#{time_ago_in_words(post.updated_at)} ago by #{post.user.name}" %>
-          </span>
-      <% end %>
-  <% end %>
+<div class="header-image small-header-image content-margin">
+	<img src="<%= image_url('huettenbuch_bg.jpg')%>">
+	<h1>Hüttenbuch</h1>
 </div>
-<br>
+
+<div class="container content-margin">
+	<%= link_to 'Neuer Hüttenbucheintrag', new_guestbook_post_path, class: "btn ghost-btn" %>
+
+	<div class="list-group pages article-listing">
+	  <% @posts.each do |post| %>
+	      <%= link_to post, class: "list-group-item" do %>
+	      <div class="flex-container link-to-article">
+	          <div><%= post.title %></div>
+	          <div class="date">
+        		14.07.2016 - 28.07.2016
+      		  </div>
+      	  </div>
+	          <span class="label label-default label-pill pull-xs-right author">
+	            <%= "#{time_ago_in_words(post.updated_at)} ago by #{post.user.name}" %>
+	          </span>
+	      <% end %>
+	  <% end %>
+	</div>
+	<br>
+</div>

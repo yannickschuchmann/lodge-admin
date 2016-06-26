@@ -14,12 +14,117 @@
  *= require summernote
  */
 
+ /* rot für button: #C13712
+ 	blau für button: #132C82
+ */
 @import "bootstrap_custom";
 @import "summernote";
 @import "content";
 @import "pages";
 @import "guestbook";
 @import "users";
+@import "header";
+@import "footer";
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:300|Raleway);
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,700);
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	margin: 0 0 50px 0;
+}
+
+h2, h3 {
+	color: $brown;
+}
+
+h1 {
+	font-size: 120px;
+	color: #fff;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 24px; /*30px */
+}
+
+h3 {
+	font-size: 18px; /* 24px */
+}
+
+a {
+	color: $green;
+
+	&:hover {
+		color: #2B4A07;
+	}
+}
+
+.flex-container {
+	display: flex;
+}
+
+.content-margin {
+	margin-bottom: 30px;
+}
+
+.ghost-btn {
+	color: $orange;
+	border: 1px solid $orange!important;
+	border-radius: 20px!important;
+	background: transparent;
+}
+
+.link-to-article {
+	flex-flow: column;
+}
+
+.header-image {
+	border-top: 3px solid $brown;
+	border-bottom: 3px solid $brown;
+	padding: 0;
+	height: 500px;
+	background: url("huette.JPG");
+	background-size: cover;
+	background-position: center bottom;
+	
+	img {
+		width: 100%;
+	}
+
+	h1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.small-header-image {
+	height: 160px;
+	overflow: hidden;
+
+	img {
+		filter: blur(40px);
+	}
+}
+
+.date {
+	color: $brown;
+	font-size: 14px; /* 16px */
+}
+
+.content-entry {
+	.ghost-btn {
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+}
 
 .btn .material-icons {
 	vertical-align: bottom;
