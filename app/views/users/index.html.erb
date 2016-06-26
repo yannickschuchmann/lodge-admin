@@ -1,20 +1,165 @@
+<div class="container">
 <%= link_to 'New User', new_user_path, class: "btn btn-primary-outline" %>
-<table class="table table-striped users">
-  <thead>
-  <tr>
-    <th>#</th>
-    <th colspan="5"></th>
-  </tr>
-  </thead>
-  <tbody>
-    <% @users.each_with_index do |user, i| %>
-      <tr>
-        <th scope="row"><%= i + 1 %></th>
-        <td><%= user.name %></td>
-        <td><%= user.birthday %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <table class="table table-striped users">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th colspan="5"></th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @users.each_with_index do |user, i| %>
+        <tr>
+          <th scope="row"><%= i + 1 %></th>
+          <td><%= user.name %></td>
+          <td><%= user.birthday %></td>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="row content-margin">
+    <div class="col-md-4">
+      <div class=" user-entry">
+        <div class="row">
+          <div class="col-md-4 user-image flex-container">
+            <div class="user-initials">
+                <span>LD</span>
+            </div>
+          </div>
+          <div class="col-md-8 user-list flex-container">
+            <ul>
+              <li class="user-name">Lena Demski</li>
+              <li>Friedensallee 15</li>
+              <li>22765 Hamburg</li>
+              <li>123456 7890</li>
+              <li>test@test.de</li>
+              <li>Bearbeiten Löschen</li>
+            </ul>  
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="col-md-4">
+      <div class=" user-entry">
+        <div class="row">
+          <div class="col-md-4 user-image flex-container">
+            <div class="user-initials">
+                <span>LD</span>
+            </div>
+          </div>
+          <div class="col-md-8 user-list flex-container">
+            <ul>
+              <li class="user-name">Lena Demski</li>
+              <li>Friedensallee 15</li>
+              <li>22765 Hamburg</li>
+              <li>123456 7890</li>
+              <li>test@test.de</li>
+            </ul>  
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="col-md-4">
+      <div class=" user-entry">
+        <div class="row">
+          <div class="col-md-4 user-image flex-container">
+            <div class="user-initials">
+                <span>LD</span>
+            </div>
+          </div>
+          <div class="col-md-8 user-list flex-container">
+            <ul>
+              <li class="user-name">Lena Demski</li>
+              <li>Friedensallee 15</li>
+              <li>22765 Hamburg</li>
+              <li>123456 7890</li>
+              <li>test@test.de</li>
+            </ul>  
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="col-md-4">
+      <div class=" user-entry">
+        <div class="row">
+          <div class="col-md-4 user-image flex-container">
+            <div class="user-initials">
+                <span>LD</span>
+            </div>
+          </div>
+          <div class="col-md-8 user-list flex-container">
+            <ul>
+              <li class="user-name">Lena Demski</li>
+              <li>Friedensallee 15</li>
+              <li>22765 Hamburg</li>
+              <li>123456 7890</li>
+              <li>test@test.de</li>
+              <li>Bearbeiten Löschen</li>
+            </ul>  
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <div class="row content-margin">
+    <div class="col-md-4 user-entry">
+      <div class="row">
+        <div class="col-md-4 user-image flex-container">
+          <div class="user-initials">
+              <span>LD</span>
+          </div>
+        </div>
+        <div class="col-md-8 user-list flex-container">
+          <ul>
+            <li>Lena Demski</li>
+            <li>Friedensallee 15</li>
+            <li>22765 Hamburg</li>
+            <li>123456 7890</li>
+            <li>test@test.de</li>
+            <li>Bearbeiten Löschen</li>
+          </ul>  
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 user-entry">
+      <div class="row">
+        <div class="col-md-4 user-image flex-container">
+          <div class="user-initials">
+              <span>LD</span>
+          </div>
+        </div>
+        <div class="col-md-8 user-list flex-container">
+          <ul>
+            <li>Lena Demski</li>
+            <li>Friedensallee 15</li>
+            <li>22765 Hamburg</li>
+            <li>123456 7890</li>
+            <li>test@test.de</li>
+          </ul>  
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 user-entry">
+      <div class="row">
+        <div class="col-md-4 user-image flex-container">
+          <div class="user-initials">
+              <span>LD</span>
+          </div>
+        </div>
+        <div class="col-md-8 user-list flex-container">
+          <ul>
+            <li>Lena Demski</li>
+            <li>Friedensallee 15</li>
+            <li>22765 Hamburg</li>
+            <li>123456 7890</li>
+            <li>test@test.de</li>
+          </ul>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
