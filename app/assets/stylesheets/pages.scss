@@ -19,7 +19,8 @@
 h2.page-edit {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: flex-end;
+	flex-flow: column;
 	small {
 		font-size: 40%;
 		text-align: right;
