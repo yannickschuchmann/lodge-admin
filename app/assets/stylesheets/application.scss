@@ -165,8 +165,9 @@ a {
 	justify-content: center;
 	align-items: center;
 	.logo {
-		position: absolute;
+		position: relative;
 		text-align: center;
+		color: #000;
 		top: -4rem;
 		right: 0;
 		left: 0;
