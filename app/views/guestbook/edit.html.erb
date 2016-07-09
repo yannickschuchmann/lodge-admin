@@ -1,5 +1,10 @@
+<%= render partial: "layouts/header-image", locals: {
+    text: "Bearbeiten",
+    image: image_url('huettenbuch_bg.jpg'),
+    classes: "small-header without-image-header huettenbuch-header-img" 
+} %>
+
 <div class="container">
-	<h2><%= t("Hüttenbucheintrag bearbeiten") %></h2>
 
 	<%= render 'form', post: @post %>
 

@@ -1,5 +1,10 @@
+<%= render partial: "layouts/header-image", locals: {
+    text: "Neue Seite",
+    image: image_url('sanktblasien.JPG'),
+    classes: "small-header without-image-header" 
+} %>
+
 <div class="container">
-	<h2>Neue Seite erstellen</h2>
 
 	<%= render 'form', page: @page %>
 
