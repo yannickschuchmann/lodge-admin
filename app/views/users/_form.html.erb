@@ -29,6 +29,34 @@
         <%= f.label :birthday %>
         <%= f.date_field :birthday, class: "form-control" %>
       </fieldset>
+
+      <%= f.fields_for :address, user.address || Address.new do |fa| %>
+        <fieldset class="form-group">
+          <%= fa.label :line1 %>
+          <%= fa.text_field :line1, class: "form-control" %>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= fa.label :line2 %>
+          <%= fa.text_field :line2, class: "form-control" %>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= fa.label :zip %>
+          <%= fa.text_field :zip, class: "form-control" %>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= fa.label :city %>
+          <%= fa.text_field :city, class: "form-control" %>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= fa.label :country %>
+          <%= fa.text_field :country, class: "form-control" %>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= fa.label :phone %>
+          <%= fa.text_field :phone, class: "form-control" %>
+        </fieldset>
+      <% end %>
+
       <% if current_user.is_admin? || user == current_user %>
           <fieldset class="form-group">
             <%= f.label :password %>
@@ -39,11 +67,11 @@
             <%= f.password_field :password_confirmation, class: "form-control" %>
           </fieldset>
           <% if current_user.is_admin? %>
-          <div class="checkbox">
-            <label>
-              <%= f.check_box :admin %> is admin?
-            </label>
-          </div>
+              <div class="checkbox">
+                <label>
+                  <%= f.check_box :admin %> is admin?
+                </label>
+              </div>
           <% end %>
       <% end %>
 

@@ -14,10 +14,19 @@
       <ul>
         <li class="user-name"><%= user.name %></li>
         <li><%= if user.birthday then l(user.birthday) else "-" end %></li>
-        <li>Friedensallee 15</li>
-        <li>22765 Hamburg</li>
-        <li>123456 7890</li>
-        <li><a href="mailto:<%= user.email %>"><%= user.email %></a></li>
+        <li><%= if user.address.try(:line1).present? then user.address.line1 else "-" end %></li>
+        <li><%= user.address.try(:line2) %></li>
+        <li><%= if user.address.try(:zip).present? || user.address.try(:city).present?
+                then user.address.zip + " " + user.address.city
+                else "-" end %></li>
+        <li><%= if user.address.try(:phone).present? then user.address.phone else "-" end %></li>
+        <li>
+          <% if user.try(:email).present? %>
+            <a href='mailto:<%= user.email %>'><%= user.email %></a>
+          <% else %>
+            -
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
