@@ -173,3 +173,38 @@ a {
 		left: 0;
 	}
 }
+.alert-content {
+	position: relative;
+	//height: 60px;
+	.alert {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 10px;
+		z-index: 100;
+		opacity: 0.9;
+		animation: hide-delay 1s 1 2s;
+		-webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+		-moz-animation-fill-mode:forwards; /*FF 5+*/
+		-o-animation-fill-mode:forwards; /*Not implemented yet*/
+		-ms-animation-fill-mode:forwards; /*IE 10+*/
+		animation-fill-mode: forwards;
+	}
+	.login-container & .alert {
+		position: relative;
+	}
+}
+
+
+@keyframes hide-delay {
+	0% {
+		opacity: 0.9;
+	}
+	99% {
+		//visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		//visibility: hidden;
+	}
+}
