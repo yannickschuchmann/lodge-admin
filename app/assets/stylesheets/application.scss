@@ -51,10 +51,15 @@ h1 {
 
 h2 {
 	font-size: 24px; /*30px */
+	margin-bottom: 20px;
 }
 
 h3 {
 	font-size: 18px; /* 24px */
+}
+
+div[class^="col-"] {
+	min-width: 0;
 }
 
 a {
@@ -78,7 +83,7 @@ img {
 }
 
 .content-margin {
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 }
 
 .ghost-btn {
@@ -128,20 +133,48 @@ img {
 }
 
 .content-entry {
+	h3 {
+		a {
+			img {
+				margin-right: 10px;
+			}
+		}
+	}
+	p {
+		padding-bottom: 40px;
+		text-align: justify;
+	}
 	.ghost-btn {
-		margin-left: 50%;
-		transform: translateX(-50%);
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate3d(-50%, 0, 0);
 	}
 }
 
 .book-entry {
+	width: 100%;
+	margin-bottom: 30px; 
+	.flex-container {
+		width: 100%;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
 	.book-entry-image {
 		margin-right: 10px;
+		flex: 0 0 40px;
 	}
 
 	.book-entry-title {
+		flex: 1;
+		min-width: 0;
 		h3 {
 			margin-bottom: 3px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			padding-bottom: 2px;
 		}
 	}
 }
@@ -157,12 +190,13 @@ img {
 	&::after {
 		content: none;
 	}
-
+	
 	.navbar-nav {
 		display: flex;
 		align-items: center;
 	}
 }
+
 .login-container {
 	height: 100vh;
 	display: flex;
