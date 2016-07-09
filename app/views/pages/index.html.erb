@@ -1,10 +1,12 @@
-<%= link_to 'New Page', new_page_path, class: "btn btn-primary-outline" %>
-<div class="list-group pages">
-  <% @pages.each do |page| %>
-    <%= link_to page, class: "list-group-item" do %>
-      <%= page.title %>
-      <span class="label label-default label-pill pull-xs-right"><%= "#{time_ago_in_words(page.updated_at)} ago" %></span>
-    <% end %>
-  <% end %>
+<div class="container">
+	<%= link_to 'New Page', new_page_path, class: "btn btn-primary-outline" %>
+	<div class="list-group pages">
+	  <% @pages.each do |page| %>
+	    <%= link_to page, class: "list-group-item" do %>
+	      <%= page.title %>
+	      <span class="label label-default label-pill pull-xs-right"><%= "#{time_ago_in_words(page.updated_at)} ago" %></span>
+	    <% end %>
+	  <% end %>
+	</div>
+	<br>
 </div>
-<br>
