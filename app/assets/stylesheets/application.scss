@@ -97,6 +97,13 @@ img {
 	background: transparent;
 }
 
+.action-btn {
+	color: #fff;
+	border: 1px solid $orange!important;
+	border-radius: 20px!important;
+	background: orange;
+}
+
 .link-to-article {
 	flex-flow: column;
 }
