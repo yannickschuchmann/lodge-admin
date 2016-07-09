@@ -1,10 +1,13 @@
-<h1 class="page-edit">
-  Editing Page
-  <small class="text-muted">Last updated <%= "#{time_ago_in_words(@page.updated_at)} ago" %><br>
-    by <%= link_to @page.user.name, @page.user %></small>
-</h1>
+<div class="container">
+	<h1 class="page-edit">
+	  Editing Page
+	  <small class="text-muted">Last updated <%= "#{time_ago_in_words(@page.updated_at)} ago" %><br>
+	    by <%= link_to @page.user.name, @page.user %></small>
+	</h1>
 
-<%= render 'form', page: @page %>
+	<%= render 'form', page: @page %>
 
-<%= link_to 'Show', @page %> |
-<%= link_to 'Back', pages_path %>
+	<%= link_to 'Show', @page %> |
+	<%= link_to 'Back', pages_path %>
+</div>
+
