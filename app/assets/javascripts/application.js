@@ -36,7 +36,6 @@ var sendFile = function(file, $toSummernote) {
 			console.log(err)
 		},
 		success: function(data) {
-			console.log("uploaded", data);
 			$toSummernote.summernote("insertImage", data.url);
 		}
 	})
@@ -47,7 +46,6 @@ var ready = function() {
 	$('[data-provider="summernote"]').each(function(){
 		$(this).summernote({
 			onImageUpload: function(files) {
-				console.log('triggered');
 				sendFile(files[0], $(this));
 			}
 		});
