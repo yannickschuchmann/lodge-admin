@@ -13,16 +13,21 @@
 }
 .sidebar-module {
 	.btn {
-		margin-bottom: 1rem;
+		margin-bottom: 3rem;
 	}
 }
-h1.page-edit {
+h2.page-edit {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	small {
 		font-size: 40%;
 		text-align: right;
+
+		&.text-muted {
+			font-size: 14px;
+			line-height: 20px;
+		}
 	}
 }
 
