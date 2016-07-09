@@ -1,7 +1,9 @@
-<div class="header-image small-header-image content-margin">
-	<img src="<%= image_url('huettenbuch_bg.jpg')%>">
-	<h1>Hüttenbuch</h1>
-</div>
+<%= render partial: "layouts/header-image", locals: {
+    text: "Hüttenbuch",
+    image: image_url('huette.JPG'),
+    classes: "small-header"
+} %>
+
 
 <div class="container content-margin">
 	<%= link_to 'Neuer Hüttenbucheintrag', new_guestbook_post_path, class: "btn ghost-btn" %>
