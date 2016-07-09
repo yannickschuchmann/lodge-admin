@@ -1,3 +1,9 @@
+<%= render partial: "layouts/header-image", locals: {
+    text: "Inhalte",
+    image: image_url('sanktblasien.JPG'),
+    classes: "small-header background-position-center" 
+} %>
+
 <div class="container">
 	<%= link_to 'New Page', new_page_path, class: "btn btn-primary-outline" %>
 	<div class="list-group pages">
