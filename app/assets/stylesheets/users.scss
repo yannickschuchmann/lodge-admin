@@ -2,14 +2,33 @@
 	margin-top: 1rem;
 }
 
+
+.user-listing {
+	> div {
+		margin-bottom: $grid-gutter-width;
+	}
+}
+
 .user-entry {
 	border: 1px solid $brown;
 	border-radius: 5px;
 	padding: 15px;
 	height: 100%;
 	display: flex;
-	margin-bottom: $grid-gutter-width;
-
+	position: relative;
+	&:hover {
+		.actions {
+			display: block;
+		}
+	}
+	.actions {
+		display: none;
+		z-index: 1;
+		position: absolute;
+		left: 15px;
+		top: 15px;
+		a { color: #000000 };
+	}
 	> .row {
 		flex: 1;
 	}
@@ -34,8 +53,9 @@
 		}
 	}
 	.user-list {
-		align-items: center;
+		align-items: flex-start;
 		ul {
+			width: 100%;
 			list-style-type: none;
 			padding-left: 0;
 			font-weight: bold;
@@ -44,6 +64,9 @@
 			.user-name {
 				font-weight: bold;
 				font-size: 18px;
+			}
+			li {
+				word-wrap: break-word;
 			}
 		}
 	}

@@ -16,4 +16,8 @@ class User < ApplicationRecord
   def is_admin?
     self.admin
   end
+
+  def initials
+    (self.first_name[0] + self.last_name[0]).upcase
+  end
 end

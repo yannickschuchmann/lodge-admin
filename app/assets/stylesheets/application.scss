@@ -86,6 +86,9 @@ img {
 .content-margin {
 	margin-bottom: 60px;
 }
+.gutter-margin {
+	margin-bottom: $grid-gutter-width;
+}
 
 .ghost-btn {
 	color: $orange;
