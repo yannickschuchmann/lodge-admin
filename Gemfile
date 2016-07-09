@@ -21,6 +21,8 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'material_icons'
 gem "font-awesome-rails"
 
+gem "rails-i18n"
+
 gem 'browser-timezone-rails'
 
 gem 'devise', :github => 'plataformatec/devise', :branch => 'master'

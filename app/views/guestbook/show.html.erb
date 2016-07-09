@@ -10,10 +10,10 @@
       </div>
       <div class="flex-container blog-post-btns">
         <%= link_to @prev_post, class: "btn ghost-btn" + (@prev_post.blank? ? " disabled" : "") do %>
-          <%= material_icon.navigate_before %> previous
+          <%= material_icon.navigate_before %> <%= t(:previous) %>
       <% end %>
       <%= link_to @next_post, class: "btn ghost-btn" + (@next_post.blank? ? " disabled" : "") do %>
-           next <%= material_icon.navigate_next %>
+           <%= t(:next) %> <%= material_icon.navigate_next %>
       <% end %> 
       </div>
     </div>
