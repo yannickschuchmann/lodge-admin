@@ -122,13 +122,19 @@ img {
 	}
 }
 
-.small-header-image {
-	height: 160px;
-	overflow: hidden;
-
-	img {
-		filter: blur(40px);
+.small-header {
+	height: 240px;
+	h1 {
+		font-size: 80px;
 	}
+}
+
+.background-position-center {
+	background-position: center!important;
+}
+
+.huettenbuch-header-img {
+	background-position: 0 34%!important;
 }
 
 .date {
