@@ -10,7 +10,7 @@
 <div class="sidebar-module last-posts">
   <ol class="list-unstyled">
     <% @latest_posts.each do |post| %>
-    <li><%= link_to post.title, post %></li>
+    <li><img src="<%= image_url('trees.svg')%>"> <%= link_to post.title, post %></li>
     <% end %>
   </ol>
 </div>

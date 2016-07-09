@@ -1,9 +1,9 @@
 <div class="container">
-	<h1 class="page-edit">
+	<h2 class="page-edit">
 	  Editing Page
 	  <small class="text-muted">Last updated <%= "#{time_ago_in_words(@page.updated_at)} ago" %><br>
 	    by <%= link_to @page.user.name, @page.user %></small>
-	</h1>
+	</h2>
 
 	<%= render 'form', page: @page %>
 

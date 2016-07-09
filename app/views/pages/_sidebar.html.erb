@@ -3,7 +3,7 @@
     <%= material_icon.edit %> <%= t(:edit) %>
   <% end %>
   <%= link_to @page, class: "btn btn-sm btn-danger-outline",
-                method: :delete, data: { confirm: 'Are you sure?' } do %>
+                method: :delete, data: { confirm: 'Bist Du sicher, dass Du den Eintrag wirklich löschen?' } do %>
       <%= material_icon.delete %> <%= t(:destroy) %>
   <% end %>
 </div>
@@ -11,7 +11,7 @@
   <h4><%= t(:pages) %></h4>
   <ol class="list-unstyled">
     <% @pages.each do |page| %>
-    <li><%= link_to page.title, page %></li>
+    <li><img src="<%= image_url('trees.svg')%>"> <%= link_to page.title, page %></li>
     <% end %>
   </ol>
 </div>
