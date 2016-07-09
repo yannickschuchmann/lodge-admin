@@ -1,6 +1,8 @@
-<h1><%= t("Editing Guestbook Post") %></h1>
+<div class="container">
+	<h2><%= t("Hüttenbucheintrag bearbeiten") %></h2>
 
-<%= render 'form', post: @post %>
+	<%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', guestbook_posts_path %>
+	<%= link_to 'Show', @post %> |
+	<%= link_to 'Back', guestbook_posts_path %>
+</div>

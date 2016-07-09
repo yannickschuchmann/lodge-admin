@@ -1,5 +1,7 @@
-<h1><%= t("New Guestbook Post") %></h1>
+<div class="container">
+	<h2><%= t("Neuen Eintrag erstellen") %></h2>
 
-<%= render 'form', post: @post %>
+	<%= render 'form', post: @post %>
 
-<%= link_to 'Back', guestbook_posts_path %>
+	<%= link_to 'Back', guestbook_posts_path %>
+</div>
