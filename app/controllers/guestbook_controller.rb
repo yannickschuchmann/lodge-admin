@@ -22,6 +22,7 @@ class GuestbookController < ApplicationController
   # GET /guestbook_posts/new
   def new
     @post = GuestbookPost.new
+    @post.trip = Trip.new
   end
 
   # GET /guestbook_posts/1/edit
@@ -77,6 +78,6 @@ class GuestbookController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guestbook_post_params
-      params.require(:guestbook_post).permit(:title, :body, :user_id)
+      params.require(:guestbook_post).permit(:title, :body, :user_id, trip_attributes: [:id, :started_at, :ended_at])
     end
 end
