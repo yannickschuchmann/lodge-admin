@@ -13,59 +13,103 @@
 
 <%= form_for(user) do |f| %>
     <form>
-      <fieldset class="form-group">
-        <%= f.label :first_name %>
-        <%= f.text_field :first_name, class: "form-control" %>
-      </fieldset>
-      <fieldset class="form-group">
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset class="form-group">
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, class: "form-control" %>
+        </fieldset>
+      </div> 
+      <div class="col-md-6">
+        <fieldset class="form-group">
         <%= f.label :last_name %>
         <%= f.text_field :last_name, class: "form-control" %>
       </fieldset>
-      <fieldset class="form-group">
+      </div> 
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, class: "form-control" %>
       </fieldset>
-      <fieldset class="form-group">
+      </div> 
+      <div class="col-md-6">
+        <fieldset class="form-group">
         <%= f.label :birthday %>
         <%= f.date_field :birthday, class: "form-control" %>
       </fieldset>
-
-      <%= f.fields_for :address, user.address || Address.new do |fa| %>
-        <fieldset class="form-group">
-          <%= fa.label :line1 %>
-          <%= fa.text_field :line1, class: "form-control" %>
+      </div> 
+    </div>
+    <%= f.fields_for :address, user.address || Address.new do |fa| %>
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset class="form-group">
+            <%= fa.label :line1 %>
+            <%= fa.text_field :line1, class: "form-control" %>
+          </fieldset>
         </fieldset>
-        <fieldset class="form-group">
-          <%= fa.label :line2 %>
-          <%= fa.text_field :line2, class: "form-control" %>
-        </fieldset>
-        <fieldset class="form-group">
-          <%= fa.label :zip %>
-          <%= fa.text_field :zip, class: "form-control" %>
-        </fieldset>
-        <fieldset class="form-group">
-          <%= fa.label :city %>
-          <%= fa.text_field :city, class: "form-control" %>
-        </fieldset>
-        <fieldset class="form-group">
-          <%= fa.label :country %>
-          <%= fa.text_field :country, class: "form-control" %>
-        </fieldset>
-        <fieldset class="form-group">
-          <%= fa.label :phone %>
-          <%= fa.text_field :phone, class: "form-control" %>
-        </fieldset>
+        </div> 
+        <div class="col-md-6">
+          <fieldset class="form-group">
+            <%= fa.label :line2 %>
+            <%= fa.text_field :line2, class: "form-control" %>
+          </fieldset>
+        </div> 
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+            <fieldset class="form-group">
+            <%= fa.label :zip %>
+            <%= fa.text_field :zip, class: "form-control" %>
+          </fieldset>
+        </div> 
+        <div class="col-md-6">
+          <fieldset class="form-group">
+            <%= fa.label :line2 %>
+            <%= fa.text_field :line2, class: "form-control" %>
+          </fieldset>
+        </div> 
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset class="form-group">
+            <%= fa.label :city %>
+            <%= fa.text_field :city, class: "form-control" %>
+          </fieldset>
+        </div> 
+        <div class="col-md-6">
+          <fieldset class="form-group">
+            <%= fa.label :country %>
+            <%= fa.text_field :country, class: "form-control" %>
+          </fieldset>
+        </div> 
+      </div>  
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset class="form-group">
+            <%= fa.label :phone %>
+            <%= fa.text_field :phone, class: "form-control" %>
+          </fieldset> 
+        </div>
+      </div>  
       <% end %>
-
+      
       <% if current_user.is_admin? || user == current_user %>
+      <div class="row">
+        <div class="col-md-6">
           <fieldset class="form-group">
             <%= f.label :password %>
             <%= f.password_field :password, class: "form-control" %>
-          </fieldset>
+          </fieldset>  
+        </div>
+        <div class="col-md-6">
           <fieldset class="form-group">
             <%= f.label :password_confirmation %>
             <%= f.password_field :password_confirmation, class: "form-control" %>
-          </fieldset>
+          </fieldset>  
+        </div>
+      </div>
           <% if current_user.is_admin? %>
               <div class="checkbox">
                 <label>

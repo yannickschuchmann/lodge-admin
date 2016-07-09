@@ -1,5 +1,10 @@
+<%= render partial: "layouts/header-image", locals: {
+    text: "Neuer Nutzer",
+    image: image_url('wiese.JPG'),
+    classes: "small-header without-image-header"
+} %>
+
 <div class="container">
-	<h2>Neuer Nutzer</h2>
 
 	<%= render 'form', user: @user %>
 
