@@ -5,8 +5,9 @@
 } %>
 
 <div class="container">
-	<%= link_to 'New Page', new_page_path, class: "btn btn-primary-outline" %>
-	<div class="list-group pages">
+	<%= link_to 'Neuer Eintrag', new_page_path, class: "btn ghost-btn" %>
+
+	<div class="list-group pages article-listing">
 	  <% @pages.each do |page| %>
 	    <%= link_to page, class: "list-group-item" do %>
 	      <%= page.title %>
