@@ -13,7 +13,8 @@ module Lodge
     # -- all .rb files in that directory are automatically loaded.
 
     # config.time_zone = 'Berlin'
-    config.i18n.default_locale = :'de'
+    config.i18n.default_locale = :de
+    config.i18n.locale = :de
     config.generators do |g|
       g.javascript_engine :js
     end
