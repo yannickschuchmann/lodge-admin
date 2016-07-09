@@ -50,6 +50,7 @@
 		li {
 			border-bottom: 1px solid $brown;
 			padding: 5px 0;
+			display: flex;
 			&:first-child {
 				padding-top: 0;
 			}

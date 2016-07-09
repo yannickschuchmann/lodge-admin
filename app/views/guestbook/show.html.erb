@@ -9,6 +9,13 @@
     <div class="col-sm-12 col-md-8 blog-main">
       <div class="blog-post">
         <h2 class="blog-post-title"><%= @post.title %></h2>
+        <p>
+          <% if @post.trip.try(:started_at) || @post.trip.try(:ended_at) %>
+              <%= l(@post.trip.started_at) %> - <%= l(@post.trip.ended_at) %>
+          <% else %>
+              -
+          <% end  %>
+        </p>
         <p class="blog-post-meta">Zuletzt bearbeitet <%= "vor #{time_ago_in_words(@post.updated_at)} " %> von
           <%= link_to @post.user.name, users_path(@post.user) %></p>
 

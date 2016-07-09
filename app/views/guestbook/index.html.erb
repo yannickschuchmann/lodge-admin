@@ -14,7 +14,11 @@
 	      <div class="flex-container link-to-article">
 	          <div><%= post.title %></div>
 	          <div class="date">
-        		14.07.2016 - 28.07.2016
+              <% if post.trip.try(:started_at) || post.trip.try(:ended_at) %>
+                  <%= l(post.trip.started_at) %> - <%= l(post.trip.ended_at) %>
+              <% else %>
+                  -
+              <% end  %>
       		  </div>
       	  </div>
 	          <span class="label label-default label-pill pull-xs-right author">

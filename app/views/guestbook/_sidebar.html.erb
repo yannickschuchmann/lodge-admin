@@ -10,7 +10,20 @@
 <div class="sidebar-module last-posts">
   <ol class="list-unstyled">
     <% @latest_posts.each do |post| %>
-    <li><img src="<%= image_url('trees.svg')%>"> <%= link_to post.title, post %></li>
+    <li>
+      <img src="<%= image_url('trees.svg')%>">
+      <div>
+        <%= link_to post.title, post %>
+        <div class="date">
+
+        <% if post.trip.try(:started_at) || post.trip.try(:ended_at) %>
+            <%= l(post.trip.started_at) %> - <%= l(post.trip.ended_at) %>
+        <% else %>
+            -
+        <% end  %>
+        </div>
+      </div>
+    </li>
     <% end %>
   </ol>
 </div>
