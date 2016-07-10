@@ -151,6 +151,8 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    non-stupid-digest-assets (1.0.8)
+      sprockets (>= 2.0)
     orm_adapter (0.5.0)
     paperclip (5.0.0)
       activemodel (>= 4.2.0)
@@ -271,6 +273,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   material_icons
+  non-stupid-digest-assets
   paperclip
   pg
   puma
