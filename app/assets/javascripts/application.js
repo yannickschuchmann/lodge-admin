@@ -50,6 +50,11 @@ var ready = function() {
 			}
 		});
 	});
+
+	$('.navbar-toggler').on('click', function(e) {
+		e.preventDefault();
+		$(this).closest("nav").toggleClass("active");
+	});
 };
 
 $(document).on('turbolinks:load', ready); // turbolinks

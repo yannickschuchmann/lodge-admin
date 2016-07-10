@@ -17,7 +17,7 @@
               -
           <% end  %>
         </p>
-        <p class="blog-post-meta">Zuletzt bearbeitet <%= "#{time_ago_in_words(@post.updated_at)} #{t(:ago_by)}" %> von
+        <p class="blog-post-meta">Zuletzt bearbeitet <%= "#{time_ago_in_words(@post.updated_at)} #{t(:ago_by)}" %>
           <%= link_to @post.user.name, users_path(@post.user) %></p>
 
         <%= @post.body.html_safe %>

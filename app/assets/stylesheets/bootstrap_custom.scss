@@ -49,6 +49,7 @@ $enable-flex: true;
 //@import "bootstrap/popover";
 //@import "bootstrap/carousel";
 
+@import "bootstrap/utilities-responsive";
 // Utility classes
-//@import "bootstrap/utilities";
+@import "bootstrap/utilities";
 @import "bootstrap/utilities-background";

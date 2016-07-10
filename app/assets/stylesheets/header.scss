@@ -4,4 +4,9 @@ header {
 		padding-left: 0;
 		padding-right: 0;
 	}
+	.navs {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
 }
