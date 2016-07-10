@@ -10,8 +10,14 @@
 	<div class="list-group pages article-listing">
 	  <% @pages.each do |page| %>
 	    <%= link_to page, class: "list-group-item" do %>
-	      <%= page.title %>
-	      <span class="label label-default label-pill pull-xs-right"><%= "#{time_ago_in_words(page.updated_at)} ago" %></span>
+        <div class="title">
+	        <span><%= page.title %></span>
+          <span class="created_at">Erstellt am: <%= l(page.created_at, format: :short) %></span>
+        </div>
+	      <div class="label label-default label-pill last-edited">
+          <div>Zuletzt bearbeitet</div>
+          <div><%= "#{time_ago_in_words(page.updated_at)} #{t(:ago_by)}" %></div>
+        </div>
 	    <% end %>
 	  <% end %>
 	</div>

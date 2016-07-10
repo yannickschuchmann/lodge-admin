@@ -19,7 +19,7 @@
 		border: none;
 		border-bottom: 1px solid $brown;
 		margin-bottom: 0;
-		border-radius: none;
+		border-radius: 0;
 
 		&:last-child {
 			border: none;
@@ -30,11 +30,33 @@
 			align-self: center;
 		}
 	}
+	.last-edited {
+		margin-left: auto;
+		display: flex;
+		flex-flow: column;
+		align-items: flex-end;
+		> div:last-child {
+			color: $green;
+		}
+	}
 	a {
 		color: $green;
-
+		display: flex;
+		align-items: center;
 		&:hover {
 			background: #B2CC95;
+		}
+		.title {
+			display: flex;
+			flex-flow: column;
+			align-items: flex-start;
+			span {
+				margin: 0;
+			}
+		}
+		.created_at, .last-edited {
+			font-size: 12px;
+			color: $brown;
 		}
 	}
 	
