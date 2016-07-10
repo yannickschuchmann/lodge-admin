@@ -8,15 +8,15 @@
     <%= f.fields_for :trip, post.trip || Trip.new do |ff| %>
     <div class="row">
       <div class="col-md-6 col-sm-6 col-xs-12">
-      <fieldset class="form-group<%= " has-danger" if post.errors[:title].present? %>">
+      <fieldset class="form-group<%= " has-danger" if post.trip.errors[:started_at].present? %>">
         <%= ff.label :started_at %>
-        <%= ff.date_field :started_at, placeholder: true, class: "form-control form-control-lg #{"form-control-danger" if post.errors[:title].present?}" %>
+        <%= ff.date_field :started_at, placeholder: true, class: "form-control form-control-lg #{"form-control-danger" if post.trip.errors[:started_at].present?}" %>
       </fieldset>  
       </div>  
       <div class="col-md-6 col-sm-6 col-xs-12">
-        <fieldset class="form-group<%= " has-danger" if post.errors[:title].present? %>">
+        <fieldset class="form-group<%= " has-danger" if post.trip.errors[:ended_at].present? %>">
         <%= ff.label :ended_at %>
-        <%= ff.date_field :ended_at, placeholder: true, class: "form-control form-control-lg #{"form-control-danger" if post.errors[:title].present?}" %>
+        <%= ff.date_field :ended_at, placeholder: true, class: "form-control form-control-lg #{"form-control-danger" if post.trip.errors[:ended_at].present?}" %>
         </fieldset>   
       </div>
     </div>

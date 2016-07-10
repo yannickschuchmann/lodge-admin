@@ -1,12 +1,6 @@
 <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-        <% user.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-        <% end %>
-      </ul>
+    <div class="alert alert-danger" role="alert">
+      <%= user.errors.count%> Fehler <%= user.errors.count > 1 ? "sind" : "ist" %> aufgetreten
     </div>
 <% end %>
 
@@ -15,16 +9,16 @@
     <form>
     <div class="row">
       <div class="col-md-6">
-        <fieldset class="form-group">
+        <fieldset class="form-group<%= " has-danger" if user.errors[:first_name].present? %>">
           <%= f.label :first_name %>
-          <%= f.text_field :first_name, class: "form-control" %>
+          <%= f.text_field :first_name, class: "form-control #{"form-control-danger" if user.errors[:first_name].present?}" %>
         </fieldset>
       </div> 
       <div class="col-md-6">
-        <fieldset class="form-group">
-        <%= f.label :last_name %>
-        <%= f.text_field :last_name, class: "form-control" %>
-      </fieldset>
+        <fieldset class="form-group<%= " has-danger" if user.errors[:last_name].present? %>">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, class: "form-control #{"form-control-danger" if user.errors[:last_name].present?}" %>
+        </fieldset>
       </div> 
     </div>
     <div class="row">
