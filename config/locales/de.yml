@@ -237,6 +237,7 @@ de:
   logout: Abmelden
   ago_by: zuvor von
   back: Zurück
+  pages: Seiten
   activerecord:
     models:
       guestbook_post:

@@ -10,7 +10,7 @@
     <div class="col-sm-12 col-md-8 blog-main">
       <div class="blog-post">
         <h2 class="blog-post-title"><%= @page.title %></h2>
-        <p class="blog-post-meta">Zuletzt bearbeitet <%= "#{time_ago_in_words(@page.updated_at)} #{t(:ago_by)}" %> by
+        <p class="blog-post-meta">Zuletzt bearbeitet <%= "#{time_ago_in_words(@page.updated_at)} #{t(:ago_by)}" %>
           <%= link_to @page.user.name, users_path(anchor: @page.user.id) %>
         </p>
         <%= @page.body.html_safe %>
