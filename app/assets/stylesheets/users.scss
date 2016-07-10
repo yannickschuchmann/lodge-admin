@@ -74,3 +74,12 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.user-entry {
+		.user-list {
+			text-align: center;
+			margin-top: 15px;
+		}
+	}
+}
