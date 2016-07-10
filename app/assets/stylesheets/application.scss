@@ -13,10 +13,9 @@
  *= require material_icons
  *= require summernote
  */
-
- /* rot für button: #C13712
- 	blau für button: #132C82
- */
+/* rot für button: #C13712
+	blau für button: #132C82
+*/
 @import "bootstrap_custom";
 @import "font-awesome";
 @import "summernote";
@@ -26,7 +25,6 @@
 @import "users";
 @import "header";
 @import "footer";
-
 @import url(https://fonts.googleapis.com/css?family=Oswald:300|Raleway);
 @import url(https://fonts.googleapis.com/css?family=Oswald:300,700);
 
@@ -39,12 +37,19 @@ body {
 	font-family: 'Raleway', sans-serif;
 	margin: 0 0 100px 0;
 }
+
 body.login {
 	margin: 0;
 }
 
 h2, h3 {
 	color: $brown;
+}
+
+button {
+	&:focus {
+		outline: 0;
+	}
 }
 
 h1 {
@@ -104,8 +109,8 @@ img {
 
 .ghost-btn {
 	color: $orange;
-	border: 1px solid $orange!important;
-	border-radius: 20px!important;
+	border: 1px solid $orange !important;
+	border-radius: 20px !important;
 	background: transparent;
 	user-select: none;
 	position: relative;
@@ -122,14 +127,14 @@ img {
 		-webkit-border-radius: 20px;
 		-moz-border-radius: 20px;
 		border-radius: 20px;
-		transform: scale3d(0.7, 1,1);
+		transform: scale3d(0.7, 1, 1);
 		transition: opacity .3s, transform .3s;
 		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 	}
 	&:hover {
 		color: #ffffff;
 		&:before {
-			transform: scale3d(1,1,1);
+			transform: scale3d(1, 1, 1);
 			opacity: 1;
 		}
 	}
@@ -137,8 +142,8 @@ img {
 
 .action-btn {
 	color: #fff;
-	border: 1px solid $orange!important;
-	border-radius: 20px!important;
+	border: 1px solid $orange !important;
+	border-radius: 20px !important;
 	background: orange;
 
 	&:hover {
@@ -159,7 +164,7 @@ img {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center bottom;
-	
+
 	img {
 		width: 100%;
 	}
@@ -181,17 +186,17 @@ img {
 
 .without-image-header {
 	height: 110px;
-	h1 { 
-		font-size: 50px!important;
+	h1 {
+		font-size: 50px !important;
 	}
 }
 
 .background-position-center {
-	background-position: center!important;
+	background-position: center !important;
 }
 
 .huettenbuch-header-img {
-	background-position: 0 34%!important;
+	background-position: 0 34% !important;
 }
 
 .date {
@@ -221,7 +226,7 @@ img {
 
 .book-entry {
 	width: 100%;
-	margin-bottom: 30px; 
+	margin-bottom: 30px;
 	.flex-container {
 		width: 100%;
 	}
@@ -257,13 +262,69 @@ img {
 	&::after {
 		content: none;
 	}
-	
 	.navbar-nav {
 		display: flex;
 		align-items: center;
 	}
+	> .label {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+	}
+	&.mobile {
+		flex-flow: column;
+		position: relative;
+		.navbar-brand {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate3d(-50%, -50%, 0);
+		}
+		&.active {
+			.navbar-content {
+				max-height: 400px;
+				opacity: 1;
+				border-bottom: 3px solid $brown;
+			}
+		}
+		.navbar-content {
+			position: absolute;
+			top: 100%;
+			left: -$grid-gutter-width;
+			right: -$grid-gutter-width;
+			z-index: 1000;
+			background: #ffffff;
+			overflow: hidden;
+			padding: 10px $grid-gutter-width;
+			max-height: 0;
+			opacity: 0;
+			transition: max-height .2s ease-out;
+			ul {
+				padding: 0;
+				margin: 0;
+				list-style-type: none;
+				li {
+					a {
+						display: block;
+						text-align: center;
+						height: 45px;
+						line-height: 45px;
+					}
+					& + li {
+						border-top: 1px solid $brown;
+					}
+				}
+			}
+			.user {
+				text-align: center;
+				.btn {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
 }
- 
+
 .login-container {
 	min-height: 100vh;
 	display: flex;
@@ -285,6 +346,7 @@ img {
 		left: 0;
 	}
 }
+
 .alert-content {
 	position: relative;
 	//height: 60px;
@@ -296,17 +358,16 @@ img {
 		z-index: 100;
 		opacity: 0.9;
 		animation: hide-delay 1s 1 2s;
-		-webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
-		-moz-animation-fill-mode:forwards; /*FF 5+*/
-		-o-animation-fill-mode:forwards; /*Not implemented yet*/
-		-ms-animation-fill-mode:forwards; /*IE 10+*/
+		-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+		-moz-animation-fill-mode: forwards; /*FF 5+*/
+		-o-animation-fill-mode: forwards; /*Not implemented yet*/
+		-ms-animation-fill-mode: forwards; /*IE 10+*/
 		animation-fill-mode: forwards;
 	}
 	.login-container & .alert {
 		position: relative;
 	}
 }
-
 
 @keyframes hide-delay {
 	0% {
@@ -323,13 +384,13 @@ img {
 
 @media (max-width: 1046px) {
 	h1 {
-		font-size: 100px!important;
+		font-size: 100px !important;
 	}
 }
 
 @media (max-width: 992px) {
 	h1 {
-		font-size: 80px!important;
+		font-size: 80px !important;
 	}
 
 	.content-margin {
@@ -339,16 +400,16 @@ img {
 
 @media (max-width: 768px) {
 	h1 {
-		font-size: 60px!important;
+		font-size: 60px !important;
 	}
 
 	.book-entry {
-		margin-bottom: 30px!important;
+		margin-bottom: 30px !important;
 	}
 
 	.without-image-header {
 		h1 {
-			font-size: 30px!important;
+			font-size: 30px !important;
 		}
 	}
 }
