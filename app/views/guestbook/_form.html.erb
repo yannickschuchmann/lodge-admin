@@ -1,41 +1,35 @@
 <%= form_for(post) do |f| %>
     <% if post.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-          <ul>
-            <% post.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
+        <div class="alert alert-danger" role="alert">
+          <%= post.errors.count%> Fehler <%= post.errors.count > 1 ? "sind" : "ist" %> aufgetreten
         </div>
     <% end %>
     
     <%= f.fields_for :trip, post.trip || Trip.new do |ff| %>
     <div class="row">
       <div class="col-md-6">
-      <fieldset class="form-group">
+      <fieldset class="form-group<%= " has-danger" if post.errors[:title].present? %>">
         <%= ff.label :started_at %>
-        <%= ff.date_field :started_at, placeholder: :from, class: "form-control form-control-lg" %>
+        <%= ff.date_field :started_at, placeholder: true, class: "form-control form-control-lg #{"form-control-danger" if post.errors[:title].present?}" %>
       </fieldset>  
       </div>  
       <div class="col-md-6">
-        <fieldset class="form-group">
+        <fieldset class="form-group<%= " has-danger" if post.errors[:title].present? %>">
         <%= ff.label :ended_at %>
-        <%= ff.date_field :ended_at, placeholder: :till, class: "form-control form-control-lg" %>
+        <%= ff.date_field :ended_at, placeholder: true, class: "form-control form-control-lg #{"form-control-danger" if post.errors[:title].present?}" %>
         </fieldset>   
       </div>
     </div>
     <% end %>
 
-    <fieldset class="form-group">
+    <fieldset class="form-group<%= " has-danger" if post.errors[:title].present? %>">
       <%= f.label :title %>
-      <%= f.text_field :title, placeholder: :title, class: "form-control form-control-lg" %>
+      <%= f.text_field :title, placeholder: true, class: "form-control form-control-lg #{"form-control-danger" if post.errors[:title].present?}" %>
     </fieldset>
 
     <fieldset class="form-group">
       <%= f.label :body %>
-      <%= f.text_area :body, placeholder: :content, class: "form-control", data: {provider: :summernote} %>
+      <%= f.text_area :body, placeholder: true, class: "form-control", data: {provider: :summernote} %>
     </fieldset>
 
     <%= f.submit nil, class: "btn action-btn" %>

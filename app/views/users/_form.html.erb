@@ -66,33 +66,27 @@
         </div> 
         <div class="col-md-6">
           <fieldset class="form-group">
-            <%= fa.label :line2 %>
-            <%= fa.text_field :line2, class: "form-control" %>
-          </fieldset>
-        </div> 
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <fieldset class="form-group">
             <%= fa.label :city %>
             <%= fa.text_field :city, class: "form-control" %>
           </fieldset>
-        </div> 
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-6">
           <fieldset class="form-group">
             <%= fa.label :country %>
             <%= fa.text_field :country, class: "form-control" %>
           </fieldset>
         </div> 
-      </div>  
-      <div class="row">
         <div class="col-md-6">
           <fieldset class="form-group">
             <%= fa.label :phone %>
             <%= fa.text_field :phone, class: "form-control" %>
-          </fieldset> 
+          </fieldset>
         </div>
-      </div>  
+      </div>
+      <div class="row">
+      </div>
       <% end %>
       
       <% if current_user.is_admin? || user == current_user %>

@@ -3,4 +3,6 @@ class GuestbookPost < ApplicationRecord
   belongs_to :trip
 
   accepts_nested_attributes_for :trip
+
+  validates :title, presence: true
 end

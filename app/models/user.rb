@@ -2,8 +2,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :address, dependent: :destroy
-
   accepts_nested_attributes_for :address
+
+  validates :first_name, :last_name, presence: true
 
   def name
     "#{self.first_name} #{self.last_name}"
