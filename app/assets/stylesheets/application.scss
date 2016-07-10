@@ -93,6 +93,10 @@ img {
 	margin-bottom: $grid-gutter-width;
 }
 
+.btn-primary-outline, .btn-danger-outline {
+	border-radius: 18px;
+}
+
 .ghost-btn {
 	color: $orange;
 	border: 1px solid $orange!important;
@@ -249,16 +253,23 @@ img {
 		align-items: center;
 	}
 }
-
+ 
 .login-container {
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: column;
+	.row {
+		justify-content: center;
+	}
+}
+
+.login {
 	.logo {
 		position: relative;
 		text-align: center;
-		color: #000;
+		color: $brown;
 		top: 0;
 		right: 0;
 		left: 0;
