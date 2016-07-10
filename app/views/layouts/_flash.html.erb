@@ -1,11 +1,11 @@
-<% if notice.present? %>
+<% unless notice.blank? %>
 	<div class="container">
     <div class="alert-content">
 		  <div class="alert alert-success" role="alert"><%= notice %></div>
     </div>
 	</div>
 <% end %>
-<% if alert.present? %>
+<% unless alert.blank? %>
 	<div class="container">
     <div class="alert-content">
 		  <div class="alert alert-danger" role="alert"><%= alert %></div>
