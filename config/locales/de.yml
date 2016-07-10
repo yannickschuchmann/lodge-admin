@@ -148,6 +148,18 @@ de:
       create: "%{model} erstellen"
       submit: "%{model} speichern"
       update: "%{model} aktualisieren"
+      user:
+        create: "Benutzer erstellen"
+        submit: "Benutzer speichern"
+        update: "Benutzer aktualisieren"
+      page:
+        create: "Seite erstellen"
+        submit: "Seite speichern"
+        update: "Seite aktualisieren"
+      guestbook_post:
+        create: "Hüttenbucheintrag erstellen"
+        submit: "Hüttenbucheintrag speichern"
+        update: "Hüttenbucheintrag aktualisieren"
   number:
     currency:
       format:
@@ -224,3 +236,38 @@ de:
   login: Anmelden
   logout: Abmelden
   ago_by: zuvor von
+  back: Zurück
+  activerecord:
+    models:
+      guestbook_post:
+        one: "Hüttenbucheintrag"
+        other: "Hüttenbucheinträge"
+      address: "Adresse"
+      image: "Bild"
+      page: "Seite"
+      trip: "Aufenthalt"
+      user: Benutzer
+    attributes:
+      guestbook_post:
+        title: "Titel"
+        body: "Inhalt"
+      page:
+        title: "Titel"
+        body: "Inhalt"
+      trip:
+        started_at: "Von"
+        ended_at: "Bis"
+      user:
+        first_name: Vorname
+        last_name: Nachname
+        email: E-Mail
+        birthday: Geburtstag
+        password: Passwort
+        password_confirmation: Passwortbestätigung
+      address:
+        line1: Straße, Hausnummer
+        line2: Zusatz
+        zip: PLZ
+        city: Stadt
+        country: Staat
+        phone: Telefon/Handy

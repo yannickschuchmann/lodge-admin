@@ -5,8 +5,6 @@
 } %>
 
 <div class="container">
-
+  <%= link_to t(:back), guestbook_posts_path, :class => "btn ghost-btn gutter-margin" %>
 	<%= render 'form', post: @post %>
-
-	<%= link_to 'Back', guestbook_posts_path %>
 </div>
