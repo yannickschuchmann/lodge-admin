@@ -11,7 +11,9 @@
 	<div class="list-group pages article-listing">
 	  <% @posts.each do |post| %>
 	      <%= link_to post, class: "list-group-item" do %>
+	      <img src="<%= image_url('trees.svg')%>">	
 	      <div class="flex-container link-to-article">
+
 	          <div><%= post.title %></div>
 	          <div class="date">
               <% if post.trip.try(:started_at) || post.trip.try(:ended_at) %>
