@@ -98,6 +98,32 @@ img {
 	border: 1px solid $orange!important;
 	border-radius: 20px!important;
 	background: transparent;
+	user-select: none;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		opacity: 0;
+		z-index: -1;
+		background: $orange;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		transform: scale3d(0.7, 1,1);
+		transition: opacity .3s, transform .3s;
+		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	}
+	&:hover {
+		color: #ffffff;
+		&:before {
+			transform: scale3d(1,1,1);
+			opacity: 1;
+		}
+	}
 }
 
 .action-btn {
