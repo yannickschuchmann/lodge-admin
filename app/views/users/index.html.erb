@@ -1,8 +1,14 @@
+<%= render partial: "layouts/header-image", locals: {
+    text: "Adressbuch",
+    image: image_url('wiese.JPG'),
+    classes: "small-header huettenbuch-header-img" 
+} %>
+
 <div class="container">
   <%= link_to "Neuer Benutzer", new_user_path, class: "btn ghost-btn gutter-margin" %>
   <div class="row content-margin user-listing">
     <% @users.each do |user| %>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-6 col-xs-12">
         <%= render partial: "users/item", locals: { user: user } %>
       </div>
     <% end %>
