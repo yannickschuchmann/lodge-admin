@@ -6,8 +6,8 @@
 
 <div class="container">
 
-	<%= render 'form', page: @page %>
+  <%= link_to t(:back), pages_path, :class => "btn ghost-btn gutter-margin" %>
 
-	<%= link_to 'Back', pages_path %>
+	<%= render 'form', page: @page %>
 </div>
 

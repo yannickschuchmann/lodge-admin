@@ -5,14 +5,12 @@
 } %>
 
 <div class="container">
+  <%= link_to t(:back), pages_path, :class => "btn ghost-btn gutter-margin" %>
 	<h2 class="page-edit">
 	  <small class="text-muted">Last updated <%= "#{time_ago_in_words(@page.updated_at)} ago" %><br>
 	    by <%= link_to @page.user.name, @page.user %></small>
 	</h2>
 
 	<%= render 'form', page: @page %>
-
-	<%= link_to 'Show', @page %> |
-	<%= link_to 'Back', pages_path %>
 </div>
 

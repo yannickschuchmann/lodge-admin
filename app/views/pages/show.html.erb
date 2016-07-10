@@ -5,13 +5,14 @@
 } %>
 
 <div class="container">
+  <%= link_to t(:back), pages_path, :class => "btn ghost-btn gutter-margin" %>
   <div class="row">
     <div class="col-sm-12 col-md-8 blog-main">
       <div class="blog-post">
         <h2 class="blog-post-title"><%= @page.title %></h2>
         <p class="blog-post-meta">Last updated <%= "#{time_ago_in_words(@page.updated_at)} ago" %> by
-          <%= link_to @page.user.name, users_path(anchor: @page.user.id) %></p>
-
+          <%= link_to @page.user.name, users_path(anchor: @page.user.id) %>
+        </p>
         <%= @page.body.html_safe %>
       </div>
     </div>
