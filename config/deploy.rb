@@ -1,5 +1,5 @@
 # Change these
-server 'xn--httenseite-9db.de', roles: [:web, :app, :db], primary: true
+server 'furfm.de', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:yannickschuchmann/lodge-admin.git'
 set :application,     'lodge-admin'
