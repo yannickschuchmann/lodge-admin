@@ -89,6 +89,11 @@ img {
 .content-margin {
 	margin-bottom: 60px;
 }
+
+.content-margin-header {
+	margin-bottom: 30px;
+}
+
 .gutter-margin {
 	margin-bottom: $grid-gutter-width;
 }
@@ -135,6 +140,11 @@ img {
 	border: 1px solid $orange!important;
 	border-radius: 20px!important;
 	background: orange;
+
+	&:hover {
+		background: #fff;
+		color: $orange;
+	}
 }
 
 .link-to-article {
