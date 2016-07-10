@@ -10,17 +10,22 @@
           </ul>
         </div>
     <% end %>
-
+    
     <%= f.fields_for :trip, post.trip || Trip.new do |ff| %>
-    <fieldset class="form-group">
-      <%= ff.label :started_at %>
-      <%= ff.date_field :started_at, placeholder: :from, class: "form-control form-control-lg" %>
-    </fieldset>
-
-    <fieldset class="form-group">
-      <%= ff.label :ended_at %>
-      <%= ff.date_field :ended_at, placeholder: :till, class: "form-control form-control-lg" %>
-    </fieldset>
+    <div class="row">
+      <div class="col-md-6">
+      <fieldset class="form-group">
+        <%= ff.label :started_at %>
+        <%= ff.date_field :started_at, placeholder: :from, class: "form-control form-control-lg" %>
+      </fieldset>  
+      </div>  
+      <div class="col-md-6">
+        <fieldset class="form-group">
+        <%= ff.label :ended_at %>
+        <%= ff.date_field :ended_at, placeholder: :till, class: "form-control form-control-lg" %>
+        </fieldset>   
+      </div>
+    </div>
     <% end %>
 
     <fieldset class="form-group">
