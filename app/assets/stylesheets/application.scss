@@ -39,6 +39,9 @@ body {
 	font-family: 'Raleway', sans-serif;
 	margin: 0 0 100px 0;
 }
+body.login {
+	margin: 0;
+}
 
 h2, h3 {
 	color: $brown;
@@ -222,7 +225,7 @@ img {
 }
 
 .login-container {
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -230,7 +233,7 @@ img {
 		position: relative;
 		text-align: center;
 		color: #000;
-		top: -4rem;
+		top: 0;
 		right: 0;
 		left: 0;
 	}
