@@ -5,9 +5,8 @@
 } %>
 
 <div class="container">
+  <%= link_to t(:back), users_path, class: "btn ghost-btn gutter-margin" %>
 
 	<%= render 'form', user: @user %>
-
-	<%= link_to 'Back', users_path %>
 
 </div>

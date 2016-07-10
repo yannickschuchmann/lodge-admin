@@ -5,14 +5,20 @@
 } %>
 
 <div class="container">
-	<%= link_to 'Neuer Eintrag', new_page_path, class: "btn ghost-btn" %>
+	<%= link_to 'Neue Seite', new_page_path, class: "btn ghost-btn" %>
 
 	<div class="list-group pages article-listing">
 	  <% @pages.each do |page| %>
 	    <%= link_to page, class: "list-group-item" do %>
-	      <img src="<%= image_url('trees.svg')%>">
-	      <%= page.title %>
-	      <span class="label label-default label-pill pull-xs-right"><%= "#{time_ago_in_words(page.updated_at)} ago" %></span>
+		<img src="<%= image_url('trees.svg')%>">
+        <div class="title">
+	        <span><%= page.title %></span>
+          <span class="created_at">Erstellt am: <%= l(page.created_at, format: :short) %></span>
+        </div>
+	      <div class="label label-default label-pill last-edited">
+	          <div>Zuletzt bearbeitet</div>
+	          <div><%= "#{time_ago_in_words(page.updated_at)} #{t(:ago_by)} #{page.user.name}" %></div>
+	        </div>
 	    <% end %>
 	  <% end %>
 	</div>

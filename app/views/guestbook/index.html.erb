@@ -23,9 +23,12 @@
               <% end  %>
       		  </div>
       	  </div>
-	          <span class="label label-default label-pill pull-xs-right author">
-	            <%= "#{time_ago_in_words(post.updated_at)} ago by #{post.user.name}" %>
-	          </span>
+          <div class="label label-default label-pill last-edited">
+            <div>Zuletzt bearbeitet</div>
+            <div class="label label-default label-pill pull-xs-right author">
+              <%= "#{time_ago_in_words(post.updated_at)} #{t(:ago_by)} #{post.user.name}" %>
+            </div>
+          </div>
 	      <% end %>
 	  <% end %>
 	</div>
