@@ -1,5 +1,5 @@
 <div class="col-md-4 content-entry">
   <h3><a href="<%= page_url(page) %>"><img src="<%= image_url('trees.svg')%>"><%= page.title %></a></h3>
-  <p><%= strip_tags(page.body) %></p>
+  <p><%= strip_tags(page.body)[0..280].gsub(/\s\w+\s*$/, '...') %></p>
   <a href="<%= page_url(page) %>" class="btn ghost-btn">Mehr lesen</a>
 </div>
