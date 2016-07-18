@@ -5,7 +5,9 @@
 } %>
 
 <div class="container">
-
+  <%= link_to "Benutzer löschen", @user, method: :delete, data: { confirm: "Bist du dir sicher?" }, class: "pull-right btn btn-sm btn-danger-outline gutter-margin" %>
+  <div class="clearfix"></div>
 	<%= render 'form', user: @user %>
+  <br>
 
 </div>
