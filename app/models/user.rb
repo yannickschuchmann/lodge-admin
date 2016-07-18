@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
 
-  default_scope { order('last_name') }
+  default_scope { order('last_name, first_name') }
 
   belongs_to :address, dependent: :destroy
   accepts_nested_attributes_for :address
