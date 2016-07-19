@@ -3,7 +3,11 @@
       <%= user.errors.count%> Fehler <%= user.errors.count > 1 ? "sind" : "ist" %> aufgetreten
     </div>
 <% end %>
-
+<% if user.errors[:password].present? %>
+    <div class="alert alert-danger" role="alert">
+      Passwort <%= user.errors[:password][0] %>
+    </div>
+<% end %>
 
 <%= form_for(user) do |f| %>
     <form>
