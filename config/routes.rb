@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   post 'images/upload' => 'image#upload'
 
+  get '/check.txt', to: proc {[200, {}, ['simple_check']]}  
 
   # Serve websocket cable requests in-process
   # mount ActionCable.server => '/cable'

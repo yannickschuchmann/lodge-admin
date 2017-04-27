@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '>= 5.0.0', '< 5.1'
 # gem 'rails', github: "rails/rails", ref: "dbf67b3a6f549769c5f581b70bc0c0d880d5d5d1"
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 gem 'pg'
 # Use Puma as the app server
 gem 'puma'
@@ -56,6 +55,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 3.0'
   gem 'listen', '~> 3.0.5'
@@ -65,16 +65,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-rails-console'
-  gem 'capistrano-bundler', require: false
-  #gem 'capistrano3-puma',   require: false
-  gem 'capistrano3-puma', github: "seuros/capistrano-puma", ref: "19a573e", require: false
   gem 'awesome_print', require: "ap"
   gem "rails-erd"
 end
+
+gem 'rails_12factor', group: :production
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
