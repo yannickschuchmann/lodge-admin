@@ -1,0 +1,9 @@
+{
+  "name": "diehuette",
+  "description": "lodge-admin",
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rails db:migrate"
+    }
+  }
+}

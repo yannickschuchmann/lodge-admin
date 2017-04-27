@@ -65,16 +65,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-rails-console'
-  gem 'capistrano-bundler', require: false
-  #gem 'capistrano3-puma',   require: false
-  gem 'capistrano3-puma', github: "seuros/capistrano-puma", ref: "19a573e", require: false
   gem 'awesome_print', require: "ap"
   gem "rails-erd"
 end
+
+gem 'rails_12factor', group: :production
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
