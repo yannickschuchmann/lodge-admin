@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.find_or_create_by!(email: "yannick.schuchmann@googlemail.com") do |user|
+  user.address = Address.new
   user.first_name = "Yannick"
   user.last_name = "Schuchmann"
   user.password = "changethis"
@@ -14,6 +15,7 @@ user = User.find_or_create_by!(email: "yannick.schuchmann@googlemail.com") do |u
 end
 
 user = User.find_or_create_by!(email: "demskilena@gmail.com") do |user|
+  user.address = Address.new
   user.first_name = "Lena"
   user.last_name = "Demski"
   user.password = "changethis"

@@ -16,45 +16,61 @@
 //= require tether
 //= require bootstrap
 //= require summernote
+//= require loadingoverlay
+//= require es6-promise.auto
 //= require ./js.cookie
 //= require ie10winphone8-fix
 //= require jstz
 //= require browser_timezone_rails/set_time_zone
 
-
 var sendFile = function(file, $toSummernote) {
-	var data = new FormData();
-	data.append('image[image]', file);
-	$.ajax({
-		data: data,
-		type: 'POST',
-		url: '/images/upload',
-		cache: false,
-		contentType: false,
-		processData: false,
-		error: function(err) {
-			console.log(err)
-		},
-		success: function(data) {
-			$toSummernote.summernote("insertImage", data.url);
-		}
-	})
+  return new Promise(function(resolve, reject) {
+    var data = new FormData();
+    data.append('image[image]', file);
+    $.ajax({
+      data: data,
+      type: 'POST',
+      url: '/images/upload',
+      cache: false,
+      contentType: false,
+      processData: false,
+      error: function(err) {
+        console.log(err);
+        reject(err);
+      },
+      success: function(data) {
+        resolve(data.url);
+      }
+    });
+  });
 };
 
-
 var ready = function() {
-	$('[data-provider="summernote"]').each(function(){
-		$(this).summernote({
-			onImageUpload: function(files) {
-				sendFile(files[0], $(this));
-			}
-		});
-	});
+  $('[data-provider="summernote"]').each(function() {
+    $(this).summernote({
+      onImageUpload: function(files) {
+        var $this = $(this);
+        var uploads = [];
+        for (var i = 0; i < files.length; i++) {
+          uploads.push(sendFile(files[i], $this));
+        }
+        $.LoadingOverlay('show');
+        Promise.all(uploads).then(function(urls) {
+          $.LoadingOverlay('hide');
+          for (var i = 0; i < urls.length; i++) {
+            $this.summernote('insertImage', urls[i]);
+          }
+        });
+      }
+    });
+  });
 
-	$('.navbar-toggler').on('click', function(e) {
-		e.preventDefault();
-		$(this).closest("nav").toggleClass("active");
-	});
+  $('.navbar-toggler').on('click', function(e) {
+    e.preventDefault();
+    $(this)
+      .closest('nav')
+      .toggleClass('active');
+  });
 };
 
 $(document).on('turbolinks:load', ready); // turbolinks
