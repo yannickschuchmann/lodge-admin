@@ -29,7 +29,7 @@ gem "rails-i18n"
 
 gem 'browser-timezone-rails'
 
-gem 'devise', :github => 'plataformatec/devise', :branch => 'master'
+gem 'devise'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
