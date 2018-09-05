@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'summernote-rails', '0.6.9.0'
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap', '4.0.0.alpha3'
 gem 'material_icons'
 gem "font-awesome-rails"
 
